@@ -5,6 +5,8 @@ ruby library for work with kutt.it
 $ gem install kutt
 ```
 
+for get an apikey go to kutt.it and signup and get an apikey :D
+
 make a new kutt object with apikey (register and get that from https://kutt.it)
 ```ruby
 require 'kutt'
