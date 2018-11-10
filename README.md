@@ -11,6 +11,8 @@ $ gem install kutt
 
 for get an apikey go to kutt.it and signup and get an apikey :D
 
+see what's returned on functions in [here](https://github.com/thedevs-network/kutt#api).
+
 make a new kutt object with apikey (register and get that from https://kutt.it)
 ```ruby
 require 'kutt'
