@@ -1,8 +1,9 @@
 # Kutt.rb
-ruby library for work with kutt.it
 
-[![Gem](https://img.shields.io/gem/v/kutt.svg?style=flat)](http://rubygems.org/gems/kutt "I', on RUBYGEMS") 
+[![Gem](https://img.shields.io/gem/v/kutt.svg?style=flat)](http://rubygems.org/gems/kutt "I', on RUBYGEMS")
 [![Gem](https://img.shields.io/gem/dt/kutt.svg)](https://rubygems.org/gems/kutt)
+
+ruby library for work with kutt.it
 
 ```
 $ gem install kutt
