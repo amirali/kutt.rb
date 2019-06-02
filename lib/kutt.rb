@@ -54,8 +54,8 @@ class Kutt
     return r.code, r.to_hash
   end
   
-  def list()
-    r = HTTParty.get(@base_url+'/api/url/geturls',
+  def list(count = 5)
+    r = HTTParty.get(@base_url+'/api/url/geturlsi?count='+count.to_s,
       :headers => @headers)
     
     return r.code, r.to_hash

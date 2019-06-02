@@ -3,17 +3,15 @@
 [![Gem](https://img.shields.io/gem/v/kutt.svg?style=flat)](http://rubygems.org/gems/kutt "I', on RUBYGEMS")
 [![Gem](https://img.shields.io/gem/dt/kutt.svg)](https://rubygems.org/gems/kutt)
 
-ruby library for work with kutt.it
+A Ruby wrapper for kutt.it API
 
 ```
 $ gem install kutt
 ```
 
-for get an apikey go to kutt.it and signup and get an apikey :D
+To get an apikey you need to signup at kutt.it and generate API key from settings.
 
-see what's returned on functions in [here](https://github.com/thedevs-network/kutt#api).
-
-make a new kutt object with apikey (register and get that from https://kutt.it)
+Check API response details at [Official repo](https://github.com/thedevs-network/kutt#api).
 ```ruby
 require 'kutt'
 k = Kutt.new 'apikey'
@@ -21,20 +19,25 @@ k = Kutt.new 'apikey'
 
 submit a new short url:
 ```ruby
-k.submit("url", customurl="customurl", password="password", reuse=true) # customurl, password, reuse are optional | return status code and object as hash or error
+# returns status code and object as hash or error
+# `customurl`, `password`, `reuse` are optional
+# set `reuse = true` to prevent duplicate shortend url for same link
+k.submit("url", customurl="customurl", password="password", reuse=true)
 ```
 
-list all urls:
+list urls (5 by default):
 ```ruby
-k.list # return hash of url list or error
+k.list # returns hash of urls list or error
+
+k.list(20) # to list 20 urls
 ```
 
 delete an url:
 ```ruby
-k.delete("id or url") # return message of success or error
+k.delete("id or url") # returns message of success or error
 ```
 
-stats of an url:
+stats of an specific url:
 ```ruby
-k.stats("id or url") # return message of success or error
+k.stats("id or url") # returns link stats in detail or error
 ```
