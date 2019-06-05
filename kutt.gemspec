@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
     s.name        = 'kutt'
-    s.version     = '0.0.0'
-    s.date        = '2018-11-09'
+    s.version     = '0.1.0'
+    s.date        = '2019-06-05'
     s.summary     = 'just a library for kutt in ruby'
     s.description = "library for url shorten service kutt.it"
     s.authors     = ["Amirali Esfandiari"]
