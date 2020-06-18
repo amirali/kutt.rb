@@ -21,8 +21,8 @@ submit a new short url:
 ```ruby
 # returns status code and object as hash or error
 # `customurl`, `password`, `reuse` are optional
-# set `reuse = true` to prevent duplicate shortend url for same link
-k.submit("url", customurl="customurl", password="password", reuse=true)
+# set `reuse: true` to prevent duplicate shortend url for the same link
+k.submit("url", customurl: "customurl", password: "password", reuse: true)
 ```
 
 list urls (5 by default):
