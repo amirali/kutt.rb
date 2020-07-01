@@ -32,6 +32,11 @@ k.list # returns hash of urls list or error
 k.list(20) # to list 20 urls
 ```
 
+count number of links you created:
+```ruby
+k.count # returns in string fromat
+```
+
 delete an url:
 ```ruby
 k.delete("id or url") # returns message of success or error
