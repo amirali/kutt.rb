@@ -25,11 +25,18 @@ submit a new short url:
 k.submit("url", customurl: "customurl", password: "password", reuse: true)
 ```
 
-list urls (5 by default):
+list urls (5 by default, 50 Maximum):
 ```ruby
-k.list # returns hash of urls list or error
+k.list # returns first 5 hash of urls list or error
 
-k.list(20) # to list 20 urls
+# list(count = 5, page = 1)
+k.list(50) # to list first 50 urls (50 Maximum)
+k.list(50, 2) # to list second 50 urls (default value for page number is 1)
+```
+
+list all of urls (slow):
+```ruby
+k.list_all # returns all of urls
 ```
 
 count number of links you created:

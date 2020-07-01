@@ -24,7 +24,7 @@ class Kutt
   end
 
   def delete(target)
-    url_array = target.split("/")
+    url_array = target.split('/')
     id = url_array.last
 
     payload = { 'id': id }
@@ -39,7 +39,7 @@ class Kutt
     url_array = target.split('/')
     id = url_array.last
 
-    payload = {'id': id}
+    payload = {'id': id }
 
     r = HTTParty.get(@base_url + '/api/url/stats',
       headers: @headers,
@@ -54,10 +54,24 @@ class Kutt
       return r
   end
 
-  def list(count = 5)
-    r = HTTParty.get(@base_url + '/api/url/geturls?count=' + count.to_s,
+  def list(count = 5, page = 1)
+    r = HTTParty.get(@base_url + "/api/url/geturls?count=#{count}&page=
+      #{page}",
       headers: @headers)
 
     return r.code, r.to_hash
+  end
+
+  def list_all
+    num_pages = (count.to_f / 50).ceil
+    return ''.to_hash if num_pages.zero?
+
+    full_list = []
+    (1..num_pages).each do |page|
+      r = HTTParty.get(@base_url + "/api/url/geturls?count=50&page=#{page}",
+        :headers => @headers)['list']
+      (full_list << r).flatten!
+    end
+    return r.code, full_list
   end
 end
