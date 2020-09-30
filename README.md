@@ -12,9 +12,15 @@ $ gem install kutt
 To get an apikey you need to signup at kutt.it and generate API key from settings.
 
 Check API response details at [Official repo](https://github.com/thedevs-network/kutt#api).
+For connection to `https://kutt.it`
 ```ruby
 require 'kutt'
 k = Kutt.new 'apikey'
+```
+For a custom hosted version of kutt.it.
+```ruby
+require 'kutt'
+k = Kutt.new 'apikey', 'https://custom-kutt.co'
 ```
 
 submit a new short url:

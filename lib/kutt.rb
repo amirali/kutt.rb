@@ -2,8 +2,8 @@ require 'httparty'
 require 'json'
 
 class Kutt
-  def initialize(apikey)
-    @base_url = 'https://kutt.it'
+  def initialize(apikey, base_url = 'https://kutt.it')
+    @base_url = base_url
     @headers = { 'Content-Type': 'application/json', 'Accept': 'application/json',
        'X-API-Key': apikey}
     return true
