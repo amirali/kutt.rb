@@ -3,6 +3,9 @@
 [![Gem](https://img.shields.io/gem/v/kutt.svg?style=flat)](http://rubygems.org/gems/kutt "I', on RUBYGEMS")
 [![Gem](https://img.shields.io/gem/dt/kutt.svg)](https://rubygems.org/gems/kutt)
 
+⚠️ This repo will be archived until further notice.  
+Long story short, I had some ideas about contributing to kutt itself and update this repo as it goes on. But for the past months, I could find the time nor energy to do it. If you are willing to maintain this repo, contact me via [email](mailto:amiralinull+kutt@gmail.com) to discuss the ideas and transfer the ownership.
+
 A Ruby wrapper for kutt.it API
 
 ```
